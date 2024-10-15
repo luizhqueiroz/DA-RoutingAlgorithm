@@ -1,0 +1,94 @@
+\hypertarget{class_data}{}\doxysection{Data Class Reference}
+\label{class_data}\index{Data@{Data}}
+
+
+Represents Graphs creation used for the routing algorithm program.  
+
+
+
+
+{\ttfamily \#include $<$Data.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_data_a4051526648d7a0446a6ecd88b72dc7cb}{create\+Graph}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{class_data_a75b0b52f1c8a4bd4b411933e217aa65f}{create\+Medium\+Graph}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{class_data_af729047fcb3279c2393b917e101a1571}{create\+Real\+Graph}} (const std\+::string \&edges, const std\+::string \&nodes)
+\item 
+Graph $\ast$ \mbox{\hyperlink{class_data_a94d3338c1d2f5ac3218e0543a2aaebda}{get\+Graph}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents Graphs creation used for the routing algorithm program. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_a4051526648d7a0446a6ecd88b72dc7cb}\label{class_data_a4051526648d7a0446a6ecd88b72dc7cb}} 
+\index{Data@{Data}!createGraph@{createGraph}}
+\index{createGraph@{createGraph}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{createGraph()}{createGraph()}}
+{\footnotesize\ttfamily void Data\+::create\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Creates a graph from a file with edges and distances.
+
+This function reads a file containing edges and distances and creates a graph based on that information. The file format should have each line representing an edge in the format \char`\"{}origin, destination, distance\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read. @complexity The time complexity of this function is O(\+E), where E is the number of edges in the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_data_a75b0b52f1c8a4bd4b411933e217aa65f}\label{class_data_a75b0b52f1c8a4bd4b411933e217aa65f}} 
+\index{Data@{Data}!createMediumGraph@{createMediumGraph}}
+\index{createMediumGraph@{createMediumGraph}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{createMediumGraph()}{createMediumGraph()}}
+{\footnotesize\ttfamily void Data\+::create\+Medium\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Creates a medium-\/sized graph from a file with edges and distances.
+
+This function reads a file containing edges and distances and creates a medium-\/sized graph based on that information. The file format should have each line representing an edge in the format \char`\"{}origin, destination, distance\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to read. @complexity The time complexity of this function is O(\+E), where E is the number of edges in the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_data_af729047fcb3279c2393b917e101a1571}\label{class_data_af729047fcb3279c2393b917e101a1571}} 
+\index{Data@{Data}!createRealGraph@{createRealGraph}}
+\index{createRealGraph@{createRealGraph}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{createRealGraph()}{createRealGraph()}}
+{\footnotesize\ttfamily void Data\+::create\+Real\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{edges,  }\item[{const std\+::string \&}]{nodes }\end{DoxyParamCaption})}
+
+Creates a real-\/sized graph from files with edges and nodes information.
+
+This function reads two files containing information about edges and nodes and creates a real-\/sized graph based on that information. The edges file format should have each line representing an edge in the format \char`\"{}origin, destination, distance\char`\"{}. The nodes file format should have each line representing a node in the format \char`\"{}id, longitude, latitude\char`\"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & The name of the file containing edge information. \\
+\hline
+{\em nodes} & The name of the file containing node information. @complexity The time complexity of this function is O(E + N), where E is the number of edges and N is the number of nodes in the files. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_data_a94d3338c1d2f5ac3218e0543a2aaebda}\label{class_data_a94d3338c1d2f5ac3218e0543a2aaebda}} 
+\index{Data@{Data}!getGraph@{getGraph}}
+\index{getGraph@{getGraph}!Data@{Data}}
+\doxysubsubsection{\texorpdfstring{getGraph()}{getGraph()}}
+{\footnotesize\ttfamily Graph $\ast$ Data\+::get\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns a pointer to the created graph.
+
+This function returns a pointer to the graph that was created using the {\ttfamily create\+Graph} or {\ttfamily create\+Medium\+Graph} or {\ttfamily create\+Real\+Graph} functions. It allows accessing the graph for further operations or analysis.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the created Graph object. @complexity The time complexity of this function is O(1). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_data_8h}{Data.\+h}}\item 
+Data.\+cpp\end{DoxyCompactItemize}

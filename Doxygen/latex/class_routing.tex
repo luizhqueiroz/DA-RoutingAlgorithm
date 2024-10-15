@@ -1,0 +1,120 @@
+\hypertarget{class_routing}{}\doxysection{Routing Class Reference}
+\label{class_routing}\index{Routing@{Routing}}
+
+
+Represents a routing algorithm for finding optimal paths in a graph.  
+
+
+
+
+{\ttfamily \#include $<$Routing.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_routing_a737163f1f6f28cacee535bbfdd1cbfbf}{tsp\+Backtracking}} (Graph $\ast$graph)
+\item 
+static double \mbox{\hyperlink{class_routing_a2754120a0d9c1b33dc10eb29457d95a1}{tsp\+Triang\+Approximation}} (Graph $\ast$graph, std\+::vector$<$ int $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Finds an approximate solution to the Traveling Salesman Problem (TSP) using the Triangulation algorithm. O((V + E) log V) \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_routing_a0f7b9cb642f4ac5e62ab16a62fbde972}{Tsp\+Heuristic\+Approx}} (Graph $\ast$graph, std\+::vector$<$ int $>$ \&path)
+\item 
+static double \mbox{\hyperlink{class_routing_ab6c58b464d766e450648f068fce56266}{Tsp\+Christofides\+Approx}} (Graph $\ast$graph, std\+::vector$<$ int $>$ \&path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a routing algorithm for finding optimal paths in a graph. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_routing_a737163f1f6f28cacee535bbfdd1cbfbf}\label{class_routing_a737163f1f6f28cacee535bbfdd1cbfbf}} 
+\index{Routing@{Routing}!tspBacktracking@{tspBacktracking}}
+\index{tspBacktracking@{tspBacktracking}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{tspBacktracking()}{tspBacktracking()}}
+{\footnotesize\ttfamily double Routing\+::tsp\+Backtracking (\begin{DoxyParamCaption}\item[{Graph $\ast$}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calculates the minimum distance of a traveling salesperson problem (TSP) using backtracking.
+
+This function uses a backtracking algorithm to find the minimum distance of a TSP on a given graph. The TSP aims to find the shortest possible route that visits all vertices in a graph exactly once and returns to the starting vertex.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & A pointer to the Graph object representing the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum distance of the TSP.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & A pointer to the Graph object representing the graph. The graph should be initialized and contain the vertices and edges.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum distance of the TSP. The distance is returned as a double value. If the minimum distance is not found or the graph is empty, the function returns a value of {\ttfamily INF} (infinity).
+\end{DoxyReturn}
+@complexity The time complexity of this function depends on the backtracking algorithm used and is typically exponential, O((n-\/1)!), where n is the number of vertices in the graph. \mbox{\Hypertarget{class_routing_ab6c58b464d766e450648f068fce56266}\label{class_routing_ab6c58b464d766e450648f068fce56266}} 
+\index{Routing@{Routing}!TspChristofidesApprox@{TspChristofidesApprox}}
+\index{TspChristofidesApprox@{TspChristofidesApprox}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{TspChristofidesApprox()}{TspChristofidesApprox()}}
+{\footnotesize\ttfamily double Routing\+::\+Tsp\+Christofides\+Approx (\begin{DoxyParamCaption}\item[{Graph $\ast$}]{graph,  }\item[{std\+::vector$<$ int $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Approximates the Traveling Salesman Problem (TSP) tour using the Christofides Approximation Algorithm.
+
+This function approximates the TSP tour using the Christofides Approximation Algorithm, which constructs a minimum spanning tree, finds a minimum-\/weight perfect matching of the odd-\/degree vertices, and combines them to form a tour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph representing the TSP problem. \\
+\hline
+{\em path} & A reference to a vector to store the TSP tour path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The approximate distance of the TSP tour. @complexity The time complexity of this function depends on the complexity of constructing the minimum spanning tree, finding a minimum-\/weight perfect matching, and combining them to form a tour, which is typically O(n$^\wedge$3), where n is the number of vertices in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_routing_a0f7b9cb642f4ac5e62ab16a62fbde972}\label{class_routing_a0f7b9cb642f4ac5e62ab16a62fbde972}} 
+\index{Routing@{Routing}!TspHeuristicApprox@{TspHeuristicApprox}}
+\index{TspHeuristicApprox@{TspHeuristicApprox}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{TspHeuristicApprox()}{TspHeuristicApprox()}}
+{\footnotesize\ttfamily double Routing\+::\+Tsp\+Heuristic\+Approx (\begin{DoxyParamCaption}\item[{Graph $\ast$}]{graph,  }\item[{std\+::vector$<$ int $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Approximates the Traveling Salesman Problem (TSP) tour using a Heuristic Approximation Algorithm.
+
+This function approximates the TSP tour using a heuristic approximation algorithm, which constructs a tour by greedily selecting the nearest neighbor at each step.
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph representing the TSP problem. \\
+\hline
+{\em path} & A reference to a vector to store the TSP tour path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The approximate distance of the TSP tour. @complexity The time complexity of this function is O(n$^\wedge$2), where n is the number of vertices in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_routing_a2754120a0d9c1b33dc10eb29457d95a1}\label{class_routing_a2754120a0d9c1b33dc10eb29457d95a1}} 
+\index{Routing@{Routing}!tspTriangApproximation@{tspTriangApproximation}}
+\index{tspTriangApproximation@{tspTriangApproximation}!Routing@{Routing}}
+\doxysubsubsection{\texorpdfstring{tspTriangApproximation()}{tspTriangApproximation()}}
+{\footnotesize\ttfamily double Routing\+::tsp\+Triang\+Approximation (\begin{DoxyParamCaption}\item[{Graph $\ast$}]{graph,  }\item[{std\+::vector$<$ int $>$ \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds an approximate solution to the Traveling Salesman Problem (TSP) using the Triangulation algorithm. O((V + E) log V) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & The graph representing the TSP instance. \\
+\hline
+{\em path\mbox{[}out\mbox{]}} & The approximate TSP path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the approximate TSP path.
+\end{DoxyReturn}
+This function uses the Triangulation algorithm to find an approximate solution to the TSP. It constructs a minimum spanning tree of the graph and then performs a depth-\/first traversal to generate a TSP path that visits each vertex exactly once. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_routing_8h}{Routing.\+h}}\item 
+Routing.\+cpp\end{DoxyCompactItemize}

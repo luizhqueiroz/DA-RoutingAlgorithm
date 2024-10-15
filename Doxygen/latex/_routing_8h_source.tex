@@ -1,0 +1,36 @@
+\hypertarget{_routing_8h_source}{}\doxysection{Routing.\+h}
+\mbox{\hyperlink{_routing_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROUTING\_ALGORITHM\_ROUTING\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROUTING\_ALGORITHM\_ROUTING\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}data\_structures/Graph.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}data\_structures/VertexEdge.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <climits>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_routing}{Routing}}\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_routing_a737163f1f6f28cacee535bbfdd1cbfbf}{tspBacktracking}}(Graph\ *graph);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_routing_a2754120a0d9c1b33dc10eb29457d95a1}{tspTriangApproximation}}(Graph\ *graph,\ std::vector<int>\ \&path);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_routing_a0f7b9cb642f4ac5e62ab16a62fbde972}{TspHeuristicApprox}}(Graph\ *graph,\ std::vector<int>\ \&path);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_routing_ab6c58b464d766e450648f068fce56266}{TspChristofidesApprox}}(Graph\ *graph,\ std::vector<int>\ \&path);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ tspBacktrackingRec(vector<Edge\ *>\ adj,\ std::vector<Edge\ *>\ tour,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nVisited,\ \textcolor{keywordtype}{double}\ \&minDist);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//double\ preOrderWalk(Graph\ *\ graph,\ std::vector<int>\ \&path);}}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

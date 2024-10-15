@@ -1,0 +1,30 @@
+\hypertarget{_data_8h}{}\doxysection{Data.\+h File Reference}
+\label{_data_8h}\index{Data.h@{Data.h}}
+
+
+Contains the declaration of the \mbox{\hyperlink{class_data}{Data}} class for the creattion of Graphs.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+structures/\+Graph.\+h\char`\"{}}\newline
+Include dependency graph for Data.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_data}{Data}}
+\begin{DoxyCompactList}\small\item\em Represents Graphs creation used for the routing algorithm program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the declaration of the \mbox{\hyperlink{class_data}{Data}} class for the creattion of Graphs. 
+
+\begin{DoxyAuthor}{Author}
+Luiz, Pedro e Raphael 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/06/2023 
+\end{DoxyDate}
