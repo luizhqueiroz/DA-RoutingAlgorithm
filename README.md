@@ -1,5 +1,7 @@
 # Algorithm Design
 
+## Routing Algorithm
+
 This project focuses on analyzing the Travelling Salesperson Problem (TSP) and designing both exact algorithms and heuristic approaches to solve it, enabling comparison between their performance and practicality in different contexts. The problem is addressed using diverse datasets, including those from ocean shipping and urban delivery contexts.
 
 Implemented Algorithms:
